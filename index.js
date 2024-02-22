@@ -1,8 +1,8 @@
 var http = require('http');
 
 const payload = [
-    {name: 'title'
-]
+    {name: 'title'}
+];
 
 http.createServer(function (req, res) {
     res.setHeader('Content-Type', 'application/json');
