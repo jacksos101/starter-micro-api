@@ -1,6 +1,10 @@
 var http = require('http');
+
+const payload = [
+    {name: 'title'
+]
+
 http.createServer(function (req, res) {
-    console.log(`Just got a request at ${req.url}!`)
-    res.write('Yo!');
-    res.end();
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(payload));
 }).listen(process.env.PORT || 3000);
